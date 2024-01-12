@@ -1,0 +1,38 @@
+.pagination-box{
+    display: inline-block;
+    border-radius:4px;
+}
+.pagination-box a{
+    border: 0.5px solid #212121;
+    text-decoration: none;
+    color:#fff;
+    padding:3px 10px;
+    margin:0;
+}
+.pagination-box .butn-2{
+    border-left:none;
+}
+.padination-box .pagination-1{
+    border-left:none;
+}
+.pagination-box .pag-active{
+    display:inline-block;
+    background-color: transparent;
+    box-shadow: /*3px 3px 10px rgba(0,0,0,1),
+        -1px -1px 6px rgba(255, 255, 255, 0.4), */
+        inset 3px 3px 10px rgba(0,0,0,1),
+        inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+    
+    transition: all 0.2s ease-in-out ;
+    backdrop-filter: blur(20px);
+    color:#ffffff;
+    text-decoration: none;
+}
+.pagination-box a:hover{
+    background: #212121;
+}
+
+.down-buttons{
+    display: flex;
+    justify-content: center;
+}

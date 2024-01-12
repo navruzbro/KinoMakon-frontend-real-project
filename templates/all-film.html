@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KinoMakon | Eng yaxshi filmlar makoni </title>
+
+  <!--Bootstrap styles-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!--Font awesome (Icons)-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+
+  <!--Google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,300;1,400;1,500;1,700;1,900&family=Roboto:ital,wght@0,900;1,300&family=Tilt+Neon&display=swap" rel="stylesheet">
+  <!--My css files-->
+  <link rel="stylesheet" href="../static/css/shared.css">
+  <link rel="stylesheet" href="../static/css/bg.css">
+  <link rel="stylesheet" href="../static/css/base.css">
+  <link rel="stylesheet" href="../static/css/home.css">
+  <link rel="stylesheet" href="../static/css/all-films.css">
+
+</head>
+<body>
+    <div class="navbar-custom">
+      <div class="row">
+      <div class="offset-1 col">
+        <div class="d-inline-block logo-img-div ">
+          <img src="../static/media/kinomakon.png" >
+        </div>
+      </div> 
+      <div class=" col navbar-icon-cust">
+        <div class="navbar-form-custom">
+          <form method="get">
+            <div class="search-wave-group">
+              <input required="" type="text" class="sc-input">
+              <span class="bar-s"></span>
+              <label class="label-search">
+                <span class="label-char-s" style="--index: 0">F</span>
+                <span class="label-char-s" style="--index: 1">i</span>
+                <span class="label-char-s" style="--index: 2">l</span>
+                <span class="label-char-s" style="--index: 3">m</span>
+                <span class="search-item-space"> </span>
+                <span class="label-char-s" style="--index: 4"> </span>
+                <span class="label-char-s" style="--index: 5">i</span>
+                <span class="label-char-s" style="--index: 6">z</span>
+                <span class="label-char-s" style="--index: 7">l</span>
+                <span class="label-char-s" style="--index: 8">a</span>
+                <span class="label-char-s" style="--index: 9">s</span>
+                <span class="label-char-s" style="--index: 10">h</span>
+              </label>
+            </div>
+            <button class="navbar-link navbar-link-btn">
+              <i class="fa-solid fa-magnifying-glass fa-xl custom-icon-nav"></i>
+            </button>
+            <button class="navbar-link navbar-link-btn"type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanasExample">
+              <i class="fa-solid fa-bars fa-xl custom-icon-nav"></i> 
+            </button>
+          </form>
+        </div>
+        
+      </div>
+      </div>
+    </div>
+
+    <!--/Offcanvas-->
+    <div class="offcanvas blur-box kn-text-white offcanvas-end kn-offcanvas" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+          <img class="img-fluid ofc-logo-img" src="../static/media/kinomakon.png">
+          &nbsp;&nbsp;-&nbsp;&nbsp;
+          <i class="fa-solid fa-handshake kn-text-white fa-xl"></i>
+          &nbsp;&nbsp;-&nbsp;&nbsp;
+          <div class="offcanvas-header-img-box">
+           <img class="offcanvas-header-img" src="../static/media/user-pic.avif">
+          </div>
+        </h5>
+        <button type="button" class="kn-text-white kn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark fa-xl"></i></button>
+      </div>
+      <div class="offcanvas-body">
+        <a class="butn-2 py-1 px-3 kn-ofc-btn my-1" href="#">
+          Mening profilim&nbsp;&nbsp;<img src="../static/media/user-pic.avif" class="offcanvas-profile-pic"> 
+        </a><br>
+        <a class="butn-2 py-1 px-3 kn-ofc-btn my-1" href="#">
+          Bosh sahifa*
+        </a><br>
+        <!--offcanvas accordion-->
+        <div class=" accordion-flush " id="ofc-accordion">
+          <div class="accordion-item  ">
+            <h2 class="accordion-header  ">
+              <button class="butn-2 py-1 px-3 kn-ofc-btn collapsed my-1" type="button" data-bs-toggle="collapse" data-bs-target="#ofc-kinolar" aria-expanded="false" aria-controls="ofc-kinolar">
+                Kinolar&nbsp;<i class="fa-solid fa-down-long"></i>
+              </button>
+            </h2>
+            <div id="ofc-kinolar" class="accordion-collapse collapse" data-bs-parent="#ofc-accordion">
+              <div class="accordion-body ">
+                <a class="butn-2 py-1 px-3 ms-2 mt-1" href="#">
+                  Eng so'nggi
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1" href="#">
+                  Tavsiya
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1" href="#">
+                  AQSH kinolari
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1" href="#">
+                  Multifilmlar
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1" href="#">
+                  Seriallar
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1" href="#">
+                  Hind kinolari
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1" href="#">
+                  Marvel filmlari*
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1" href="#">
+                  Kino yangiliklari*
+                </a>
+                <hr>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="butn-2 py-1 px-3 kn-ofc-btn  my-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ofc-janrlar" aria-expanded="false" aria-controls="janrlar">
+                Janrlar&nbsp;<i class="fa-solid fa-down-long"> </i>
+              </button>
+            </h2>
+            <div id="ofc-janrlar" class="accordion-collapse collapse" data-bs-parent="#ofc-accordion">
+              <div class="accordion-body">
+                <a class="butn-2 py-1 px-3 ms-2 mt-1" href="#">
+                  Jangari
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1" href="#">
+                   Ujas
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1" href="#">
+                  Fantastika
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1" href="#">
+                  Romantika, Melodrama
+                </a>
+                <hr>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="butn-2 py-1 px-3 kn-ofc-btn my-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ofc-yil" aria-expanded="false" aria-controls="ofc-yil">
+                Yil&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-down-long  "></i>
+              </button>
+            </h2>
+            <div id="ofc-yil" class="accordion-collapse collapse" data-bs-parent="#ofc-accordion">
+              <div class="accordion-body">
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2024
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2023
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2022
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2021
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2020
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2019
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2019
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2018
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2017
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2016
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2015
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2014
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2013
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2012
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2011
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2010
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2009
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2008
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2007
+                </a>
+                <a class="butn-2 py-1 px-3 ms-2 mt-1 kn-text-small" href="#">
+                  2007 dan avvalgi filmlar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End offcanvas accordion-->
+        
+        <!---->
+        
+        
+
+        <!--Another buttons-->
+        <a class="butn-2 py-1 px-3 kn-ofc-btn mt-3" href="#">
+          Kino Yangiliklari
+        </a>
+        <br>
+        <a class="butn-2 py-1 px-3 kn-ofc-btn mt-3" href="#">
+          Sayt yaratish - Batafsil
+        </a>
+        <a class="butn-2 py-1 px-3 kn-ofc-btn mt-3" href="#">
+          author - NavruzBRO :&nbsp;)
+        </a>
+      </div>
+    </div>
+
+    <!----offcanvas END---->
+    <div class="kn-top-margin-sm">
+        &nbsp;
+    </div>
+<!-----N A V B A R E N D------>
+<!--breadcrumb-->
+<nav class="kn-breadcrumb-box mt-2 ">
+           
+    <div class="kn-breadcrumb my-4">
+        <a class="" href="../index.html">Kinomakon</a><span> >> </span>
+    
+         <a class="" href="#">Barcha filmlar</a>
+    </div>
+</nav>
+<p class="px-2 kn-text-small" >Barcha film, serial va multfilmlar</p>
+<!--end breadcrumb-->
+<div class="all-film-section">
+    <div class="container-fluid">
+        <div class="film-filter row ms-2 mb-3">
+            <button class="btn butn col-3 col-md-2 mx-2 " type="button" data-bs-toggle="collapse" data-bs-target="#engsonggi" aria-expanded="true" aria-controls="engsonggi">
+               Eng so'nggi
+             </button>
+            <button class="btn butn col-3 col-md-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tavsiya" aria-expanded="false" aria-controls="tavsiya">
+               Tavsiya etilgan
+             </button>
+            <button class="btn butn col-3 col-md-2 mx-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#topreyting" aria-expanded="false" aria-controls="topreyting">
+               Top reyting*
+             </button>
+             <button class="card-filter-btn"type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanasExample">
+               <i class="fa-solid fa-filter"></i>filter
+             </button>
+         </div>
+         <div class="" id="filter-accordion">
+           <div class="accordion-item">
+             <div id="engsonggi" class="accordion-collapse collapse show" data-bs-parent="#filter-accordion">
+               <div class="accordion-body">
+                   <div class="film-filter row ms-2 mb-3">
+                       <div class="col-3 mx-2 filter-btn-active fba-color">
+                           <span>&nbsp;</span>
+                       </div>
+                       
+                    </div>
+                 <!--News -- All film and cartoons-->
+                 <div class="row mx-2 mx-lg-3">
+                   <!--CARD-->
+                   <a href="#" class="col-6 col-md-4 col-lg-3 col-xxl-2 my-2 cardContainer">
+                     <div class="circle-custom"></div>
+                     <div class="card">
+                       
+                       <div class="card-img-div">
+                         <div class="card-img-rating">
+                           <i class="fa-solid fa-star"></i>
+                           87%
+                         </div>
+                         <img class="card-img" src="../static/media/avatar-2-16-9.jpg">
+                         <div class="card-img-text">
+                           <h6>
+                             2024, AQSH
+                           </h6>
+                           <p>
+                             fantastika,jangari
+                           </p>
+                         </div>
+                       </div>
+                          <div class="card-title">
+                            <h6 class="card-title-in">
+                             Avatar 2 suv yo'li
+                            </h6>
+                            <p class="card-title-info">
+                             Bizda ajoyib Premyera
+                            </p>
+                          </div>
+                     </div>
+                   </a>
+                   <!--CARD-->
+                   <a href="#" class="col-6 col-md-4 col-lg-3 col-xxl-2  my-2 cardContainer">
+                     <div class="circle-custom"></div>
+                     <div class="card">
+                       <div class="card-img-div">
+                         <div class="card-img-rating">
+                           <i class="fa-solid fa-star"></i>
+                           99%
+                         </div>
+                         <img class="card-img" src="../static/media/kung-fu-panda-4.jpg">
+                         <div class="card-img-text">
+                           <h6>
+                             2024, AQSH
+                           </h6>
+                           <p>
+                             komediya, jangari
+                           </p>
+                         </div>
+                       </div>
+                          <div class="card-title">
+                            <h6 class="card-title-in">
+                             Kung fu panda 4 
+                            </h6>
+                            <p class="card-title-info">
+                             Bizda ajoyib Premyera
+                            </p>
+                          </div>
+                 
+                       
+                     
+                     </div>
+                   </a>
+                   <!--CARD-->
+                   <a href="#" class="col-6 col-md-4 col-lg-3 col-xxl-2  my-2 cardContainer">
+                     <div class="circle-custom"></div>
+                     <div class="card">
+                       <div class="card-img-div">
+                         <div class="card-img-rating">
+                           <i class="fa-solid fa-star"></i>
+                           87%
+                         </div>
+                         <img class="card-img" src="../static/media/Godzilla-kong-new-empire.jpg">
+                         <div class="card-img-text">
+                           <h6>
+                             2024, AQSH
+                           </h6>
+                           <p>
+                             komediya, jangari, DC
+                           </p>
+                         </div>
+                       </div>
+                          <div class="card-title">
+                            <h6 class="card-title-in">
+                             Godzilla va kong yangi imperiya va yana bitta maxluq ham bor
+                            </h6>
+                            <p class="card-title-info">
+                             Bizda ajoyib Premyera
+                            </p>
+                          </div>
+                     </div>
+                   </a>
+                   <!--CARD-->
+                   <a class="col-6 col-md-4 col-lg-3 col-xxl-2  my-2 cardContainer">
+                     <div class="card">
+                       <div class="card-img-div">
+                         <div class="card-img-rating">
+                           <i class="fa-solid fa-star"></i>
+                           95%
+                         </div>
+                         <img class="card-img" src="../static/media/joker-2.jpg">
+                         <div class="card-img-text">
+                           <h6>
+                             2024, AQSH
+                           </h6>
+                           <p>
+                             komediya, jangari, DC
+                           </p>
+                         </div>
+                       </div>
+                          <div class="card-title">
+                            <h6 class="card-title-in">
+                             JOKER 2
+                            </h6>
+                            <p class="card-title-info">
+                             Bizda ajoyib Premyera
+                            </p>
+                          </div>
+                 
+                       
+                     
+                     </div>
+                   </a>
+                   <!--CARD-->
+                   <a href="#" class="col-6 col-md-4 col-lg-3 col-xxl-2  my-2 cardContainer">
+                     <div class="card">
+                       
+                 
+                       
+                     
+                     </div>
+                   </a>
+                   <!--ENDCARD-->
+                 </div>
+                 <!--//News-->
+
+                 <!--pagination-->
+                 <nav class="mb-5 mt-3 ms-2">
+                    <div class="blur-box pagination-box">
+
+                      <a href="#" class="pagination-1">
+                        1
+                      </a>
+                    
+                      <span class=" ">
+                        &nbsp;...
+                      </span>
+                      <a href="#" class=" ">
+                        44
+                      </a>
+                      <a href="#" class=" ">
+                        45
+                      </a>
+                      <a href="#" class="pag-active">
+                        46
+                      </a>
+                      <a href="#" class=" ">
+                        47
+                      </a>
+                      <a href="#" class=" ">
+                        48
+                      </a>
+                      <span href="#" class=" ">
+                        &nbsp;...
+                      </span>
+                      <a href="#" class=" ">
+                        453
+                      </a>
+                    </div>
+                 </nav>
+                <!--endpagination-->
+               </div>
+             </div>
+           </div>
+
+           <div class="accordion-item">
+             <div id="tavsiya" class="accordion-collapse collapse" data-bs-parent="#filter-accordion">
+               <div class="accordion-body">
+                   <div class="col-3 mx-2 filter-btn-active">
+                       <span>&nbsp;</span>
+                   </div>
+                   <div class="col-3 mx-2 filter-btn-active fba-color">
+                       <span>&nbsp;</span>
+                   </div>
+                 <!--Tavsiya -- all films cartoons-->
+                 <div class="row mx-2 mx-lg-3">
+                   <!--CARD-->
+                   <a href="#" class="col-6 col-md-4 col-lg-3 col-xxl-2 my-2 cardContainer">
+                     <div class="circle-custom"></div>
+                     <div class="card">
+                       
+                       <div class="card-img-div">
+                         <div class="card-img-rating">
+                           <i class="fa-solid fa-star"></i>
+                           87%
+                         </div>
+                         <img class="card-img" src="../static/media/deadpool.jpg">
+                         <div class="card-img-text">
+                           <h6>
+                             2024, AQSH
+                           </h6>
+                           <p>
+                             komediya, jangari, DC
+                           </p>
+                         </div>
+                       </div>
+                          <div class="card-title">
+                            <h6 class="card-title-in">
+                             Deadpool 3
+                            </h6>
+                            <p class="card-title-info">
+                             Bizda ajoyib Premyera
+                            </p>
+                          </div>
+                     </div>
+                   </a>
+                   <!--CARD-->
+                   <a class="col-6 col-md-4 col-lg-3 col-xxl-2  my-2 cardContainer">
+                       <div class="card">
+                         <div class="card-img-div">
+                           <div class="card-img-rating">
+                             <i class="fa-solid fa-star"></i>
+                             95%
+                           </div>
+                           <img class="card-img" src="../static/media/joker-2.jpg">
+                           <div class="card-img-text">
+                             <h6>
+                               2024, AQSH
+                             </h6>
+                             <p>
+                               komediya, jangari, DC
+                             </p>
+                           </div>
+                         </div>
+                            <div class="card-title">
+                              <h6 class="card-title-in">
+                               JOKER 2
+                              </h6>
+                              <p class="card-title-info">
+                               Bizda ajoyib Premyera
+                              </p>
+                            </div>
+                   
+                         
+                       
+                       </div>
+                     </a>
+                   
+                   <!--CARD-->
+                   <a href="#" class="col-6 col-md-4 col-lg-3 col-xxl-2  my-2 cardContainer">
+                     <div class="circle-custom"></div>
+                     <div class="card">
+                       <div class="card-img-div">
+                         <div class="card-img-rating">
+                           <i class="fa-solid fa-star"></i>
+                           87%
+                         </div>
+                         <img class="card-img" src="../static/media/Godzilla-kong-new-empire.jpg">
+                         <div class="card-img-text">
+                           <h6>
+                             2024, AQSH
+                           </h6>
+                           <p>
+                             komediya, jangari, DC
+                           </p>
+                         </div>
+                       </div>
+                          <div class="card-title">
+                            <h6 class="card-title-in">
+                             Godzilla va kong yangi imperiya va yana bitta maxluq ham bor
+                            </h6>
+                            <p class="card-title-info">
+                             Bizda ajoyib Premyera
+                            </p>
+                          </div>
+                     </div>
+                   </a>
+                   <!--CARD-->
+                   <a href="#" class="col-6 col-md-4 col-lg-3 col-xxl-2  my-2 cardContainer">
+                       <div class="circle-custom"></div>
+                       <div class="card">
+                         <div class="card-img-div">
+                           <div class="card-img-rating">
+                             <i class="fa-solid fa-star"></i>
+                             99%
+                           </div>
+                           <img class="card-img" src="../static/media/kung-fu-panda-4.jpg">
+                           <div class="card-img-text">
+                             <h6>
+                               2024, AQSH
+                             </h6>
+                             <p>
+                               komediya, jangari
+                             </p>
+                           </div>
+                         </div>
+                            <div class="card-title">
+                              <h6 class="card-title-in">
+                               Kung fu panda 4 
+                              </h6>
+                              <p class="card-title-info">
+                               Bizda ajoyib Premyera
+                              </p>
+                           </div>
+                       </div>
+                     </a>
+                     <!--END CARD-->
+                 </div>
+                 <!--//Tavsiya-->  
+               </div>
+             </div>
+           </div>
+           <div class="accordion-item">
+             <div id="topreyting" class="accordion-collapse collapse" data-bs-parent="#filter-accordion">
+               <div class="accordion-body">
+                   <div class="col-3 mx-2 filter-btn-active">
+                       <span>&nbsp;</span>
+                   </div>
+                   <div class="col-3 mx-2 filter-btn-active">
+                       <span>&nbsp;</span>
+                   </div>
+                   <div class="col-3 mx-2 filter-btn-active fba-color fba-3">
+                       <span>&nbsp;</span>
+                   </div>
+                 <!--Famous -- Film and cartoons-->
+                 <div class="row mx-2 mx-lg-3">
+                   <!--CARD-->
+                   <a href="#" class="col-6 col-md-4 col-lg-3 col-xxl-2  my-2 cardContainer">
+                       <div class="circle-custom"></div>
+                       <div class="card">
+                         <div class="card-img-div">
+                           <div class="card-img-rating">
+                             <i class="fa-solid fa-star"></i>
+                             99%
+                           </div>
+                           <img class="card-img" src="../static/media/kung-fu-panda-4.jpg">
+                           <div class="card-img-text">
+                             <h6>
+                               2024, AQSH
+                             </h6>
+                             <p>
+                               komediya, jangari
+                             </p>
+                           </div>
+                         </div>
+                            <div class="card-title">
+                              <h6 class="card-title-in">
+                               Kung fu panda 4 
+                              </h6>
+                              <p class="card-title-info">
+                               Bizda ajoyib Premyera
+                              </p>
+                           </div>
+                       </div>
+                   </a>
+                   <!--CARD-->
+                   <a href="#" class="col-6 col-md-4 col-lg-3 col-xxl-2 my-2 cardContainer">
+                     <div class="circle-custom"></div>
+                     <div class="card">
+                       
+                       <div class="card-img-div">
+                         <div class="card-img-rating">
+                           <i class="fa-solid fa-star"></i>
+                           87%
+                         </div>
+                         <img class="card-img" src="../static/media/deadpool.jpg">
+                         <div class="card-img-text">
+                           <h6>
+                             2024, AQSH
+                           </h6>
+                           <p>
+                             komediya, jangari, DC
+                           </p>
+                         </div>
+                       </div>
+                          <div class="card-title">
+                            <h6 class="card-title-in">
+                             Deadpool 3
+                            </h6>
+                            <p class="card-title-info">
+                             Bizda ajoyib Premyera
+                            </p>
+                          </div>
+                     </div>
+                   </a>
+                   <!--CARD-->
+                   <a class="col-6 col-md-4 col-lg-3 col-xxl-2  my-2 cardContainer">
+                       <div class="card">
+                         <div class="card-img-div">
+                           <div class="card-img-rating">
+                             <i class="fa-solid fa-star"></i>
+                             95%
+                           </div>
+                           <img class="card-img" src="../static/media/joker-2.jpg">
+                           <div class="card-img-text">
+                             <h6>
+                               2024, AQSH
+                             </h6>
+                             <p>
+                               komediya, jangari, DC
+                             </p>
+                           </div>
+                         </div>
+                            <div class="card-title">
+                              <h6 class="card-title-in">
+                               JOKER 2
+                              </h6>
+                              <p class="card-title-info">
+                               Bizda ajoyib Premyera
+                              </p>
+                            </div>
+                   
+                         
+                       
+                       </div>
+                     </a>
+                   
+                   <!--CARD-->
+                   <a href="#" class="col-6 col-md-4 col-lg-3 col-xxl-2  my-2 cardContainer">
+                     <div class="circle-custom"></div>
+                     <div class="card">
+                       <div class="card-img-div">
+                         <div class="card-img-rating">
+                           <i class="fa-solid fa-star"></i>
+                           87%
+                         </div>
+                         <img class="card-img" src="../static/media/Godzilla-kong-new-empire.jpg">
+                         <div class="card-img-text">
+                           <h6>
+                             2024, AQSH
+                           </h6>
+                           <p>
+                             komediya, jangari, DC
+                           </p>
+                         </div>
+                       </div>
+                          <div class="card-title">
+                            <h6 class="card-title-in">
+                             Godzilla va kong yangi imperiya va yana bitta maxluq ham bor
+                            </h6>
+                            <p class="card-title-info">
+                             Bizda ajoyib Premyera
+                            </p>
+                          </div>
+                     </div>
+                   </a>
+                   <!--CARD-->
+                   <a href="#" class="col-6 col-md-4 col-lg-3 col-xxl-2  my-2 cardContainer">
+                       <div class="circle-custom"></div>
+                       <div class="card">
+                         <div class="card-img-div">
+                           <div class="card-img-rating">
+                             <i class="fa-solid fa-star"></i>
+                             99%
+                           </div>
+                           <img class="card-img" src="../static/media/kung-fu-panda-4.jpg">
+                           <div class="card-img-text">
+                             <h6>
+                               2024, AQSH
+                             </h6>
+                             <p>
+                               komediya, jangari
+                             </p>
+                           </div>
+                         </div>
+                            <div class="card-title">
+                              <h6 class="card-title-in">
+                               Kung fu panda 4 
+                              </h6>
+                              <p class="card-title-info">
+                               Bizda ajoyib Premyera
+                              </p>
+                           </div>
+                       </div>
+                   </a>
+                   <!--END CARD-->
+                 </div> 
+                 <!--//Famous-->
+               </div>
+             </div>
+           </div>
+         </div>
+    </div>
+    <div class="down-buttons py-2">
+      <a href="#" class="mx-1 py-1 px-2 butn kn-text-small">
+        Faqat filmlar
+      </a>
+      <a href="#" class="mx-1 py-1 px-2 butn kn-text-small">
+        Faqat multfilmlar
+      </a>
+      <a href="#" class="mx-1 py-1 px-2 butn kn-text-small">
+        Faqat multserial va seriallar
+      </a>
+    </div>
+</div>
+
+
+
+<!-----F O O T E R ------->
+<footer class="footer-section">
+    <div class="container-fluid">
+      <div class="footer-top">
+        <div class="circle-custom footer-circle"></div>
+        <div class="footer-top-inner">
+          <div class="footer-top-img">
+            <img src="../static/media/kinomakon-qora.png">
+          </div>
+          
+          <div class="footer-top-buttons mb-2 my-md-4">
+            <a class="btn butn-2 fw-600" href="#">
+              Reklama
+            </a>
+            <a class="btn butn-2" href="#">
+              Правообладателям
+            </a>
+            <a class="btn butn-2" href="#">
+              DMCA | Copyright holders
+            </a><br>
+            <a class="btn butn-2" href="#">
+              Saytdan to'g'ri foydalanish
+            </a>
+            <a class="btn butn-2" href="#">
+              Sayt haqida
+            </a>
+            <a class="btn butn-2" href="#">
+              Fikr-Mulohaza | Murojat uchun | feedback
+            </a>
+          
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom mb-2">
+        <a href="https://kinomakon.uz" class="kn-text kn-center">
+          <i class="fa-regular fa-copyright"></i>
+          KinoMakon - 2023 
+        </a>
+          <span class="kn-text-pink kn-text-very-small"> author 
+            <a class="kn-text-pink kn-text-very-small" href="https://Navruz.uz">
+              NavruzBRO
+            </a></code>
+       <div>     
+          <p class="kn-text kn-text-small">
+            The rights to films belon
+            g to their authors. All films are presented
+            for informational purposes only. The 
+            administration is not responsible for illegal
+              materials posted by users! Any 
+              <a href="#" class="kn-text"> film will be deleted </a>
+              at the request of the copyright holder
+          </p> 
+          <p class="kn-text kn-text-small">
+            Права на фильмы принадлежат их авторам.
+            Все фильмы представлены только для ознакомления. 
+            Администрация не несет ответственности за размещенные 
+            пользователями нелегальные материалы! Любой фильм 
+             <a class="kn-text" href="#"> будет удален </a>
+             по требованию правообладателя
+          </p>
+          <a class="btn butn-2 kn-text-small" href="">
+            Siz ham shunaqa saytingiz bo'lishini hohlaysizmi? - Bizga murojat qiling
+          </a>
+          <a class="btn butn-2 kn-text-small" href="">
+            Sayt yaratish - Batafsil malumot
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr class="kn-text-pink">
+  </footer>
+  
+  <!--EFFECTS-->
+  <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
